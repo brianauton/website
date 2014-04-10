@@ -7,3 +7,5 @@ gem "middleman-blog", "~> 3.5.2"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
+
+gem "bootstrap-sass", require: false
