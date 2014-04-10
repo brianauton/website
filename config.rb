@@ -1,4 +1,5 @@
 activate :blog do |blog|
+  blog.layout = :article_layout
   blog.permalink = "blog/{title}/"
   blog.sources = "articles/{year}-{month}-{day}-{title}.html"
   blog.tag_template = "tag.html"
