@@ -12,3 +12,4 @@ gem "bootstrap-sass", require: false
 gem "middleman-syntax"
 gem "redcarpet"
 gem "html2haml"
+gem "nokogiri"
