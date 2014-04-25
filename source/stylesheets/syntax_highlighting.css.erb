@@ -1,4 +1,12 @@
-code, kbd, pre, samp {
+code {
   font-family: Consolas, 'Liberation Mono', Courier, monospace;
+  color: #555 !important;
+  background-color: inherit;
 }
-<%= Rouge::Themes::Github.render scope: ".highlight" %>
+
+pre.highlight {
+  background-color: #fff;
+  font-size: 15px;
+}
+
+<%= Rouge::Themes::Base16::Solarized.render scope: ".highlight" %>
