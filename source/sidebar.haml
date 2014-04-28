@@ -1,3 +1,8 @@
+%h1 Brian Auton
+.item= link_to "About", "/about/"
+.item= link_to "Blog", "/"
+.item= link_to "Projects", "/projects/"
+.item= link_to "Contact", "/contact/"
 %h4 Recent Articles
 %ul
   - blog.articles[0...10].each do |article|
