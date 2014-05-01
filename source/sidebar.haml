@@ -8,8 +8,8 @@
 
 .well.well-sm
   .well-title Recent Posts
-  - blog.tags.each do |tag, articles|
-    .well-heading= link_to "#{tag} (#{articles.size})", tag_path(tag)
+  - blog.articles.each do |article|
+    .well-section= link_to article.title, article
 
 .well.well-sm
   .well-title Open Source Projects
