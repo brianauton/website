@@ -7,7 +7,7 @@ body {
   font-size: 16px;
 }
 
-h1, h2, h3, h4 {
+h1, h2, h3, h4, .well {
   font-family: Tahoma, Geneva, sans-serif;
 }
 
@@ -19,4 +19,31 @@ h4 {
 .article-byline {
   text-transform: uppercase;
   font-size: 14px;
+  margin-bottom: 6px;
 }
+
+.well {
+  margin-top: .5em;
+  background: #f2f2f2;
+  box-shadow: none;
+}
+
+.well-title {
+  font-size: 20px;
+}
+
+.well-heading {
+  margin-top: .8em;
+  font-size: 16px;
+}
+
+.well-section {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+.well-text {
+  font-size: 14px;
+}
+
+blockquote { display: none; }
