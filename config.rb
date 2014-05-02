@@ -6,6 +6,10 @@ activate :blog do |blog|
   blog.calendar_template = "calendar.html"
 end
 
+activate :disqus do |d|
+  d.shortname = "brianauton"
+end
+
 page "/feed.xml", layout: false
 
 set :css_dir, 'stylesheets'
