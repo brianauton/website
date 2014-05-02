@@ -20,5 +20,10 @@ set :markdown_engine, :redcarpet
 set :markdown, :fenced_code_blocks => true, :smartypants => true
 activate :syntax
 
+configure :development do
+  activate(:google_analytics) { |ga| ga.tracking_id = false }
+end
+
 configure :build do
+  activate(:google_analytics) { |ga| ga.tracking_id = "UA-8088357-1" }
 end
