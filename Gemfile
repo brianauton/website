@@ -6,6 +6,7 @@ gem "middleman", "~> 3.3.2"
 gem "middleman-blog", "~> 3.5.2"
 gem "middleman-disqus"
 gem "middleman-google-analytics"
+gem "middleman-gh-pages"
 
 # For feed.xml.builder
 gem "builder", "~> 3.0"
