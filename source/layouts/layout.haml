@@ -1,0 +1,18 @@
+!!!
+%html
+  %head
+    %meta{charset: "utf-8"}
+    %meta{content: "IE=edge;chrome=1", "http-equiv" => "X-UA-Compatible"}
+    %meta{name: "viewport", content: "width=device-width, initial-scale=1"}
+    %title
+      Brian Auton
+      = " - #{current_article.title}" if current_article
+    = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
+    = stylesheet_link_tag "all"
+    = javascript_include_tag "all"
+  %body
+    .container-fluid
+      .row
+        .col-md-7.col-md-offset-1= yield
+        .col-md-3= partial "sidebar"
+    = google_analytics_tag

@@ -1,0 +1,25 @@
+.well.well-sm
+  .well-title= link_to "Brian Auton", "/"
+  %img{src: "/images/headshot.png"}
+  .well-section Software developer and consultant in the Philadelphia area.
+  .well-section= link_to "twitter.com/brianauton", "https://twitter.com/brianauton/"
+  .well-section= link_to "linkedin.com/in/brianauton", "https://linkedin.com/in/brianauton"
+  .well-section= link_to "brianauton@gmail.com", "mailto:brianauton@gmail.com"
+
+.well.well-sm
+  .well-title Recent Posts
+  - blog.articles.each do |article|
+    .well-section= link_to article.title, article
+
+.well.well-sm
+  .well-title Open Source Projects
+  .well-heading= link_to "Conjure", "https://github.com/brianauton/conjure"
+  .well-text Rails provisioning and deployment with the power of Docker.
+  .well-heading= link_to "Rails-Embryo", "https://github.com/brianauton/rails-embryo"
+  .well-text A Rails starter project and testing ground for best practices.
+  .well-heading= link_to "Rails-Futurizer", "https://github.com/brianauton/rails-futurizer"
+  .well-text Helping to smooth the upgrade path for Rails applications.
+  .well-heading= link_to "RSpec-Contracts", "https://github.com/brianauton/rspec-contracts"
+  .well-text Automated rigor for unit tests. Still highly experimental.
+
+.copyright &copy; 2014 Brian Auton
