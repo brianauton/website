@@ -6,10 +6,6 @@ activate :blog do |blog|
   blog.calendar_template = "calendar.html"
 end
 
-activate :disqus do |d|
-  d.shortname = "brianauton"
-end
-
 page "/feed.xml", layout: false
 
 set :css_dir, 'stylesheets'
@@ -21,9 +17,11 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true
 activate :syntax
 
 configure :development do
+  activate(:disqus) { |config| config.shortname = false }
   activate(:google_analytics) { |ga| ga.tracking_id = false }
 end
 
 configure :build do
+  activate(:disqus) { |config| config.shortname = "brianauton" }
   activate(:google_analytics) { |ga| ga.tracking_id = "UA-8088357-1" }
 end
