@@ -202,14 +202,14 @@ need a couple of private methods to generate the secret and secret_id.
 We also have code to generate the all the necessary secret-related
 values at validation time. This ensures that when we save a
 newly-created AuthenticationToken, it will have all the necessary
-values (the plaintext secret will only be in memory, while the
-secret_id and hashed_secret will get saved to the database).  We can
+values (the plaintext `secret` will only be in memory, while the
+`secret_id` and `hashed_secret` will get saved to the database).  We can
 use Ruby's handy SecureRandom to generate both the secret and the
-secret_id, and we'll give the secret considerably more entropy to make
+`secret_id`, and we'll give the `secret` considerably more entropy to make
 sure it's secure. We also insert a little extra-paranoid protection
-when generating the secret_id, to make sure it's unique.
+when generating the `secret_id`, to make sure it's unique.
 
-Why does the secret_id need any entropy at all? In fact, why not just
+Why does the `secret_id` need any entropy at all? In fact, why not just
 use AuthenticationToken's existing `id` field? Because although it
 suits our purposes by being unique, it also gives away information
 about the chronological sequence of token creation and the total
