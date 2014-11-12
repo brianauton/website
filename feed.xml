@@ -5,16 +5,77 @@
   <id>http://blog.url.com/</id>
   <link href="http://blog.url.com/"/>
   <link href="http://blog.url.com/feed.xml" rel="self"/>
-  <updated>2014-05-03T20:00:00-04:00</updated>
+  <updated>2014-11-11T19:00:00-05:00</updated>
   <author>
     <name>Blog Author</name>
   </author>
+  <entry>
+    <title>The Best Commit Messages Are Just One Line</title>
+    <link rel="alternate" href="http://blog.url.com/posts/best-commit-messages-one-line.html"/>
+    <id>http://blog.url.com/posts/best-commit-messages-one-line.html</id>
+    <published>2014-11-11T19:00:00-05:00</published>
+    <updated>2014-11-12T12:50:17-05:00</updated>
+    <author>
+      <name>Article Author</name>
+    </author>
+    <content type="html">&lt;p&gt;If you want a simple way to make your commit messages more effective, try strictly limiting
+them to one line. Many developers and teams try to be helpful by packing extra detail into the
+body of each commit message whenever possible. But this detail takes extra time to write and
+to read, and it rarely adds any value. Here are some things I&amp;rsquo;ve often seen wasting space in
+the body of a multi-line commit message.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Specific descriptions of changes to the code.&lt;/strong&gt; Anyone who wants more detail about your
+commit after seeing it as a one-liner in the commit history will end up looking at the
+individual file changes in addition to the commit message. So in a commit whose main purpose
+was to “add a User model”, they&amp;rsquo;ll know that you also “added a mirgration” and “added a unit
+test.”  There&amp;rsquo;s no need to list those redundant details in the commit message. And there&amp;rsquo;s
+always the chance that you&amp;rsquo;ll make a mistake or leave something out, and the resulting
+misleading message is worse than no message at all.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Notes about follow-on tasks or things that still need to be done.&lt;/strong&gt; &lt;em&gt;“Still need to add
+acceptance tests”.&lt;/em&gt; &lt;em&gt;“This should be factored out into a new class”.&lt;/em&gt; If those tasks are
+required to finish the current feature, just do them as subsequent commits before you call the
+feature done. If they&amp;rsquo;re vital tasks but not part of the current feature, add them to the
+project&amp;rsquo;s issue tracking software. After all, no one is combing commit messages for stuff to
+do, so you can&amp;rsquo;t leave the completion of a vital feature up to the chance that someone will
+notice the reminder in your commit message. If they&amp;rsquo;re not vital, save everyone&amp;rsquo;s time by
+leaving them out.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Full URL to the issue tracker software.&lt;/strong&gt; I like commit messages that start with a brief
+reference to the issue number itself, mainly because that&amp;rsquo;s a great way to visually group
+related commits together. But it becomes tedious to paste a full URL into the commit message
+body once you realize that no one has a good reason to follow it. Developers working on the
+issue will already have it close at hand. Stakeholders verifying that a feature is complete or
+a bug is fixed are looking at the application behavior, not at the commit history. And no one
+looking back to your code in the future needs to be distracted by discussions of external
+requirements that are now outdated, or alternate approaches that were ultimately abandoned.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Discussion of requirements for the feature.&lt;/strong&gt; &lt;em&gt;“Designer asked for a darker navbar, so we&amp;rsquo;re
+trying #000066.”&lt;/em&gt; This is like linking to the issue, but worse, because it pulls irrelevant
+discussion out of the issue tracker and directly into the codebase. The commit message should
+focus on what was actually done to the code, not what should have been done.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Long descriptions.&lt;/strong&gt; Eliminating all the offenders above leaves what&amp;rsquo;s really important: the
+high-level description of what you changed. If this is too long to fit in one line, the
+problem may be that your commit is too big. Multiple sentences (as well as multiple clauses
+separated by “and”) usually signify separate concerns that should have been committed
+separately. If you&amp;rsquo;ve squashed an entire feature branch into a single commit before merging,
+stop doing that. Let your commit messages tell a story about how you solved the problem in
+individual steps.&lt;/p&gt;
+
+&lt;p&gt;Use appropriate commit sizes and practice revising your wording and eliminating the dead
+weight. You can get almost any commit message down to just one line, and each one will add
+highly-focused value to the project and make the best use of everyone&amp;rsquo;s time.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>Rails Token Authentication Without Devise</title>
     <link rel="alternate" href="http://blog.url.com/posts/token-authentication-devise.html"/>
     <id>http://blog.url.com/posts/token-authentication-devise.html</id>
     <published>2014-05-03T20:00:00-04:00</published>
-    <updated>2014-09-10T11:42:37-04:00</updated>
+    <updated>2014-11-12T12:40:17-05:00</updated>
     <author>
       <name>Article Author</name>
     </author>

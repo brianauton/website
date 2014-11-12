@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <title>
+      Brian Auton
+       - The Best Commit Messages Are Just One Line
+    </title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <link href="/stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </head>
+  <body>
+    <div class='container-fluid'>
+      <div class='row'>
+        <div class='col-md-7 col-md-offset-1'>
+          <h3><a href="/posts/best-commit-messages-one-line.html">The Best Commit Messages Are Just One Line</a></h3>
+          <div class='article-byline'>
+            by Brian Auton,
+            Nov 12 2014
+          </div>
+          <p>If you want a simple way to make your commit messages more effective, try strictly limiting
+          them to one line. Many developers and teams try to be helpful by packing extra detail into the
+          body of each commit message whenever possible. But this detail takes extra time to write and
+          to read, and it rarely adds any value. Here are some things I&rsquo;ve often seen wasting space in
+          the body of a multi-line commit message.</p>
+          
+          <p></p>
+          
+          <p><strong>Specific descriptions of changes to the code.</strong> Anyone who wants more detail about your
+          commit after seeing it as a one-liner in the commit history will end up looking at the
+          individual file changes in addition to the commit message. So in a commit whose main purpose
+          was to “add a User model”, they&rsquo;ll know that you also “added a mirgration” and “added a unit
+          test.”  There&rsquo;s no need to list those redundant details in the commit message. And there&rsquo;s
+          always the chance that you&rsquo;ll make a mistake or leave something out, and the resulting
+          misleading message is worse than no message at all.</p>
+          
+          <p><strong>Notes about follow-on tasks or things that still need to be done.</strong> <em>“Still need to add
+          acceptance tests”.</em> <em>“This should be factored out into a new class”.</em> If those tasks are
+          required to finish the current feature, just do them as subsequent commits before you call the
+          feature done. If they&rsquo;re vital tasks but not part of the current feature, add them to the
+          project&rsquo;s issue tracking software. After all, no one is combing commit messages for stuff to
+          do, so you can&rsquo;t leave the completion of a vital feature up to the chance that someone will
+          notice the reminder in your commit message. If they&rsquo;re not vital, save everyone&rsquo;s time by
+          leaving them out.</p>
+          
+          <p><strong>Full URL to the issue tracker software.</strong> I like commit messages that start with a brief
+          reference to the issue number itself, mainly because that&rsquo;s a great way to visually group
+          related commits together. But it becomes tedious to paste a full URL into the commit message
+          body once you realize that no one has a good reason to follow it. Developers working on the
+          issue will already have it close at hand. Stakeholders verifying that a feature is complete or
+          a bug is fixed are looking at the application behavior, not at the commit history. And no one
+          looking back to your code in the future needs to be distracted by discussions of external
+          requirements that are now outdated, or alternate approaches that were ultimately abandoned.</p>
+          
+          <p><strong>Discussion of requirements for the feature.</strong> <em>“Designer asked for a darker navbar, so we&rsquo;re
+          trying #000066.”</em> This is like linking to the issue, but worse, because it pulls irrelevant
+          discussion out of the issue tracker and directly into the codebase. The commit message should
+          focus on what was actually done to the code, not what should have been done.</p>
+          
+          <p><strong>Long descriptions.</strong> Eliminating all the offenders above leaves what&rsquo;s really important: the
+          high-level description of what you changed. If this is too long to fit in one line, the
+          problem may be that your commit is too big. Multiple sentences (as well as multiple clauses
+          separated by “and”) usually signify separate concerns that should have been committed
+          separately. If you&rsquo;ve squashed an entire feature branch into a single commit before merging,
+          stop doing that. Let your commit messages tell a story about how you solved the problem in
+          individual steps.</p>
+          
+          <p>Use appropriate commit sizes and practice revising your wording and eliminating the dead
+          weight. You can get almost any commit message down to just one line, and each one will add
+          highly-focused value to the project and make the best use of everyone&rsquo;s time.</p>
+          <div id="disqus_thread"></div>
+                      <script type="text/javascript">
+                      //<![CDATA[
+                          (function() {
+                              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                              dsq.src = '//brianauton.disqus.com/embed.js';
+                              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                          })();
+                      //]]>
+                      </script>
+                      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                  </script>
+        </div>
+        <div class='col-md-3'>
+          <div class='well well-sm'>
+            <div class='well-title'><a href="/">Brian Auton</a></div>
+            <img src='/images/headshot.png'>
+            <div class='well-section'>Software developer and consultant in the Philadelphia area.</div>
+            <div class='well-section'><a href="https://twitter.com/brianauton/">twitter.com/brianauton</a></div>
+            <div class='well-section'><a href="https://linkedin.com/in/brianauton">linkedin.com/in/brianauton</a></div>
+            <div class='well-section'><a href="mailto:brianauton@gmail.com">brianauton@gmail.com</a></div>
+          </div>
+          <div class='well well-sm'>
+            <div class='well-title'>Recent Posts</div>
+            <div class='well-section'><a href="/posts/best-commit-messages-one-line.html">The Best Commit Messages Are Just One Line</a></div>
+            <div class='well-section'><a href="/posts/token-authentication-devise.html">Rails Token Authentication Without Devise</a></div>
+          </div>
+          <div class='well well-sm'>
+            <div class='well-title'>Open Source Projects</div>
+            <div class='well-heading'><a href="https://github.com/brianauton/conjure">Conjure</a></div>
+            <div class='well-text'>Rails provisioning and deployment with the power of Docker.</div>
+            <div class='well-heading'><a href="https://github.com/brianauton/rails-embryo">Rails-Embryo</a></div>
+            <div class='well-text'>A Rails starter project and testing ground for best practices.</div>
+            <div class='well-heading'><a href="https://github.com/brianauton/rails-futurizer">Rails-Futurizer</a></div>
+            <div class='well-text'>Helping to smooth the upgrade path for Rails applications.</div>
+            <div class='well-heading'><a href="https://github.com/brianauton/rspec-contracts">RSpec-Contracts</a></div>
+            <div class='well-text'>Automated rigor for unit tests. Still highly experimental.</div>
+          </div>
+          <div class='copyright'>&copy; 2014 Brian Auton</div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-8088357-1"]);
+      _gaq.push(["_trackPageview"]);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+  </body>
+</html>
