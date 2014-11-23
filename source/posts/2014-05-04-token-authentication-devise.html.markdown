@@ -19,12 +19,11 @@ Those developers might be dismayed, as I was, to find that
 Devise. They might be further dismayed to find that the only solution
 that has any sort of consensus as a replacement seems dubious for a
 couple of different reasons.
+READMORE
 
 [Devise]: https://github.com/plataformatec/devise
 [most popular]: https://www.ruby-toolbox.com/categories/rails_authentication
 [removed]: https://github.com/plataformatec/devise/issues/2616
-
-READMORE
 
 #### The Problem and Solutions So Far
 

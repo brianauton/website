@@ -1,4 +1,5 @@
-%h3= link_to article.title, article
-.article-byline
-  by Brian Auton,
-  = article.date.strftime '%b %e %Y'
+%h2= link_to article.title, article
+.post_info
+  .date_area
+    = link_to "by Brian Auton,"
+    = link_to article.date.strftime("%b %e %Y")

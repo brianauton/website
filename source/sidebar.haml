@@ -1,25 +1,159 @@
-.well.well-sm
-  .well-title= link_to "Brian Auton", "/"
-  %img{src: "/images/headshot.png"}
-  .well-section Software developer and consultant in the Philadelphia area.
-  .well-section= link_to "twitter.com/brianauton", "https://twitter.com/brianauton/"
-  .well-section= link_to "linkedin.com/in/brianauton", "https://linkedin.com/in/brianauton"
-  .well-section= link_to "brianauton@gmail.com", "mailto:brianauton@gmail.com"
-
-.well.well-sm
-  .well-title Recent Posts
-  - blog.articles.each do |article|
-    .well-section= link_to article.title, article
-
-.well.well-sm
-  .well-title Open Source Projects
-  .well-heading= link_to "Conjure", "https://github.com/brianauton/conjure"
-  .well-text Rails provisioning and deployment with the power of Docker.
-  .well-heading= link_to "Rails-Embryo", "https://github.com/brianauton/rails-embryo"
-  .well-text A Rails starter project and testing ground for best practices.
-  .well-heading= link_to "Rails-Futurizer", "https://github.com/brianauton/rails-futurizer"
-  .well-text Helping to smooth the upgrade path for Rails applications.
-  .well-heading= link_to "RSpec-Contracts", "https://github.com/brianauton/rspec-contracts"
-  .well-text Automated rigor for unit tests. Still highly experimental.
-
-.copyright &copy; 2014 Brian Auton
+.sidebar_single_module
+  .sidebar_wraper
+    .sidebar_inner
+      %form{:action => "#", :method => "post"}
+        .search_box
+          %i.fa.fa-search
+          %input{:name => "search", :placeholder => "Search Here...", :type => "text"}/
+.sidebar_single_module
+  .sidebar_wraper
+    .sidebar_inner
+      .right_menu_area
+        %ul.nav.nav-pills.nav-stacked
+          %li
+            %a{:href => "index.html"} Home
+          %li
+            %a{:href => "#"} Filter
+            %ul
+              %li
+                %a{:href => "#"} Audio
+              %li
+                %a{:href => "#"} Chat
+              %li
+                %a{:href => "#"} Photo
+              %li
+                %a{:href => "#"} Gallery
+              %li
+                %a{:href => "#"} Quote
+              %li
+                %a{:href => "#"} Text
+              %li
+                %a{:href => "#"} Video
+          %li
+            %a{:href => "#"} Page
+            %ul
+              %li
+                %a{:href => "columns.html"} Columns Fullwidth
+              %li
+                %a{:href => "columns_Variant.html"} Columns
+          %li
+            %a{:href => "shortcode.html"} Shortcode
+          %li
+            %a{:href => "#"} Archives
+          %li
+            %a{:href => "#"} Contact
+.sidebar_single_module
+  .sidebar_wraper
+    .sidebar_inner
+      .right_social_area
+        %a{:href => "#"}
+          %i.icon.icon-twitter
+        %a{:href => "#"}
+          %i.icon.icon-dribbble
+        %a{:href => "#"}
+          %i.icon.icon-rss
+        %a{:href => "#"}
+          %i.icon.icon-facebook-squared
+        %a{:href => "#"}
+          %i.icon.icon-vimeo
+        %a{:href => "#"}
+          %i.icon.icon-skype
+        %a{:href => "#"}
+          %i.icon.icon-pinterest
+        %a{:href => "#"}
+          %i.icon.icon-github
+        %a{:href => "#"}
+          %i.icon.icon-lastfm
+        %a{:href => "#"}
+          %i.icon.icon-gplus
+        %a{:href => "#"}
+          %i.icon.icon-instagrem
+        %a{:href => "#"}
+          %i.icon.icon-dropbox
+        %a{:href => "#"}
+          %i.icon.icon-behance
+        %a{:href => "#"}
+          %i.icon.icon-vkontakte
+        %a{:href => "#"}
+          %i.icon.icon-evernote
+        %a{:href => "#"}
+          %i.icon.icon-picasa
+        %a{:href => "#"}
+          %i.icon.icon-flickr
+        %a{:href => "#"}
+          %i.icon.icon-droplet
+        %a{:href => "#"}
+          %i.icon.icon-stumbleupon
+        %a{:href => "#"}
+          %i.icon.icon-soundcloud
+.sidebar_single_module
+  .sidebar_wraper
+    .sidebar_inner
+      .text_widget.twitter_widget
+        %h2 Twitter feeds
+        .single_tweets
+          %h3
+            %a{:href => "#"} @HeyDesigner
+          %p Sketchcasts - A weekly screencast covering Sketch
+          %a{:href => "http://t.co/e5DEW3s"} http://t.co/e5DEW3s
+          %span 26 Feb 2014
+        .single_tweets
+          %h3
+            %a{:href => "#"} @mate_ciao
+          %p Utinam putant elige.
+          %a{:href => "http://t.co/e3q0ZW2OOr"} http://t.co/e3q0ZW2OOr
+          %span 26 Feb 2014
+        %a.btn.btn-default.twitter_btb{:href => ""} Follow on Twitter
+.sidebar_single_module
+  .sidebar_wraper
+    .sidebar_inner
+      .flickr_widget
+        %h2 Flickr Widget
+        %div
+          %a{:href => "#"}
+            %img{:alt => "Title", :src => "http://placehold.it/70x70"}/
+          %a{:href => "#"}
+            %img{:alt => "Title", :src => "http://placehold.it/70x70"}/
+          %a{:href => "#"}
+            %img{:alt => "Title", :src => "http://placehold.it/70x70"}/
+          %a{:href => "#"}
+            %img{:alt => "Title", :src => "http://placehold.it/70x70"}/
+          %a{:href => "#"}
+            %img{:alt => "Title", :src => "http://placehold.it/70x70"}/
+          %a{:href => "#"}
+            %img{:alt => "Title", :src => "http://placehold.it/70x70"}/
+.sidebar_single_module
+  .sidebar_wraper
+    .sidebar_inner
+      .dribble_widget
+        %h2 Dribbble Widget
+        %div
+          %a{:href => "#"}
+            %img{:alt => "Title", :src => "http://placehold.it/220x165"}/
+.sidebar_single_module
+  .sidebar_wraper
+    .sidebar_inner
+      .text_widget
+        %h2 Text Widget
+        %p Ad eam iriure impetus convenire, quo eu virtute officiis. Pri te illum malis voluptatibus.
+.sidebar_single_module
+  .sidebar_wraper
+    .sidebar_inner
+      .tag_area
+        %h2 Tag
+        %div
+          %a{:href => ""} Hello
+          %a{:href => ""} Ciao.
+          %a{:href => ""} Hi
+          %a{:href => ""} Howdy.
+          %a{:href => ""} Hy.
+.sidebar_single_module
+  .sidebar_wraper
+    .sidebar_inner
+      .text_widget.copy_right
+        %h2 &copy; 2014 by ThemeBull
+        %p
+          Designed with love by
+          %a{:href => ""} Mario Maruffi
+          and developed with care by
+          %a{:href => ""} PixelCoder

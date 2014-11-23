@@ -8,7 +8,6 @@ them to one line. Many developers and teams try to be helpful by packing extra d
 body of each commit message whenever possible. But this detail takes extra time to write and
 to read, and it rarely adds any value. Here are some things I've often seen wasting space in
 the body of a multi-line commit message.
-
 READMORE
 
 __Specific descriptions of changes to the code.__ Anyone who wants more detail about your

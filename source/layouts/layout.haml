@@ -9,10 +9,38 @@
       = " - #{current_article.title}" if current_article
     = feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed"
     = stylesheet_link_tag "all"
-    = javascript_include_tag "all"
+    /[if lt IE 9]
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
   %body
-    .container-fluid
-      .row
-        .col-md-7.col-md-offset-1= yield
-        .col-md-3= partial "sidebar"
+    .body_back
+      %section.left_sidebar_content_area
+        = partial "sidebar"
+      .main_content_area
+        #expand_content_menu
+          %span.icon.icon-fontawesome-webfont-1
+        #body_hover
+        %section.profile_area
+          .container
+            .row
+              .col-xs-12.col-sm-12.col-md-12.col-lg-12
+                .profile_inner
+                  .profile_picture
+                    %a{:href => "#"}
+                      %img{:alt => "title", :src => "/images/headshot.png"}/
+                  %h2
+                    %a{:href => ""} Brian Auton
+                  %p
+                    Software developer and consultant in the Philadelphia area.
+                  .social_icon
+                    %a.fa.fa-twitter{:href => ""}
+                    %a.fa.fa-facebook-square{:href => ""}
+                    %a.fa.fa-dribbble{:href => ""}
+                    %a.fa.fa-rss{:href => ""}
+        %section.home_page_post_area
+          .container
+            .row
+              .col-md-12
+                = yield
     = google_analytics_tag
+    = javascript_include_tag "all"
