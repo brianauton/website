@@ -1,5 +1,7 @@
 %h2= link_to article.title, article
 .post_info
   .date_area
+    %br
     = link_to "by Brian Auton,"
     = link_to article.date.strftime("%b %e %Y")
+    %br
