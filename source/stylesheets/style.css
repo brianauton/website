@@ -79,10 +79,14 @@ a:focus, a:active{
 	padding-top: 100px;
 	text-align: center;
 }
+.small.profile_area { padding-top: 40px; padding-bottom: 70px; }
+
 .profile_area .profile_inner{}
 .profile_area .profile_picture{
 	text-align:center;
 }
+.small.profile_area .profile_picture { display: inline; margin-right: 20px; }
+
 .profile_area .profile_picture a{
 	border: 1px solid #f3f3f3;
 	border-radius: 50%;
@@ -103,6 +107,8 @@ a:focus, a:active{
 	width: 120px;
 
 }
+.small.profile_area .profile_picture a img { width: 80px; height: 80px; }
+
 .profile_area .profile_picture a:hover{
 	opacity:.8;
 }
@@ -113,6 +119,10 @@ a:focus, a:active{
 	margin-top: 0;
 	padding: 0 0 67px 0;
 }
+.small.profile_area .profile_inner {
+  padding-bottom: 37px;
+}
+
 .profile_area .profile_inner h2{
 	font-family: 'Lato',sans-serif;
 	font-size: 50px;
@@ -127,6 +137,8 @@ a:focus, a:active{
 	-moz-transition:all .4s;
 	transition:all .4s;
 }
+.small.profile_area .profile_inner h2 { font-size: 36px; display: inline; position: relative; top: -28px;}
+
 .profile_area .profile_inner h2:hover{
 	opacity:.8;
 }

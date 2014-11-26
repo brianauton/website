@@ -20,23 +20,7 @@
         #expand_content_menu
           %span.icon.icon-fontawesome-webfont-1
         #body_hover
-        %section.profile_area
-          .container
-            .row
-              .col-xs-12.col-sm-12.col-md-12.col-lg-12
-                .profile_inner
-                  .profile_picture
-                    %a{:href => "#"}
-                      %img{:alt => "title", :src => "/images/headshot.png"}/
-                  %h2
-                    %a{:href => ""} Brian Auton
-                  %p
-                    Software developer and consultant in the Philadelphia area.
-                  .social_icon
-                    %a.fa.fa-twitter{:href => ""}
-                    %a.fa.fa-facebook-square{:href => ""}
-                    %a.fa.fa-dribbble{:href => ""}
-                    %a.fa.fa-rss{:href => ""}
+        = partial(current_article ? "subpage_header" : "homepage_header")
         %section.home_page_post_area
           .container
             .row
