@@ -1,159 +1,42 @@
 .sidebar_single_module
   .sidebar_wraper
     .sidebar_inner
-      %form{:action => "#", :method => "post"}
-        .search_box
-          %i.fa.fa-search
-          %input{:name => "search", :placeholder => "Search Here...", :type => "text"}/
-.sidebar_single_module
-  .sidebar_wraper
-    .sidebar_inner
-      .right_menu_area
-        %ul.nav.nav-pills.nav-stacked
-          %li
-            %a{:href => "index.html"} Home
-          %li
-            %a{:href => "#"} Filter
-            %ul
-              %li
-                %a{:href => "#"} Audio
-              %li
-                %a{:href => "#"} Chat
-              %li
-                %a{:href => "#"} Photo
-              %li
-                %a{:href => "#"} Gallery
-              %li
-                %a{:href => "#"} Quote
-              %li
-                %a{:href => "#"} Text
-              %li
-                %a{:href => "#"} Video
-          %li
-            %a{:href => "#"} Page
-            %ul
-              %li
-                %a{:href => "columns.html"} Columns Fullwidth
-              %li
-                %a{:href => "columns_Variant.html"} Columns
-          %li
-            %a{:href => "shortcode.html"} Shortcode
-          %li
-            %a{:href => "#"} Archives
-          %li
-            %a{:href => "#"} Contact
-.sidebar_single_module
-  .sidebar_wraper
-    .sidebar_inner
+      .text_widget
+        %h2
+          Brian Auton
+        %p Software developer and consultant in the Philadelphia area.
       .right_social_area
-        %a{:href => "#"}
-          %i.icon.icon-twitter
-        %a{:href => "#"}
-          %i.icon.icon-dribbble
-        %a{:href => "#"}
-          %i.icon.icon-rss
-        %a{:href => "#"}
-          %i.icon.icon-facebook-squared
-        %a{:href => "#"}
-          %i.icon.icon-vimeo
-        %a{:href => "#"}
-          %i.icon.icon-skype
-        %a{:href => "#"}
-          %i.icon.icon-pinterest
-        %a{:href => "#"}
-          %i.icon.icon-github
-        %a{:href => "#"}
-          %i.icon.icon-lastfm
-        %a{:href => "#"}
-          %i.icon.icon-gplus
-        %a{:href => "#"}
-          %i.icon.icon-instagrem
-        %a{:href => "#"}
-          %i.icon.icon-dropbox
-        %a{:href => "#"}
-          %i.icon.icon-behance
-        %a{:href => "#"}
-          %i.icon.icon-vkontakte
-        %a{:href => "#"}
-          %i.icon.icon-evernote
-        %a{:href => "#"}
-          %i.icon.icon-picasa
-        %a{:href => "#"}
-          %i.icon.icon-flickr
-        %a{:href => "#"}
-          %i.icon.icon-droplet
-        %a{:href => "#"}
-          %i.icon.icon-stumbleupon
-        %a{:href => "#"}
-          %i.icon.icon-soundcloud
-.sidebar_single_module
-  .sidebar_wraper
-    .sidebar_inner
-      .text_widget.twitter_widget
-        %h2 Twitter feeds
-        .single_tweets
-          %h3
-            %a{:href => "#"} @HeyDesigner
-          %p Sketchcasts - A weekly screencast covering Sketch
-          %a{:href => "http://t.co/e5DEW3s"} http://t.co/e5DEW3s
-          %span 26 Feb 2014
-        .single_tweets
-          %h3
-            %a{:href => "#"} @mate_ciao
-          %p Utinam putant elige.
-          %a{:href => "http://t.co/e3q0ZW2OOr"} http://t.co/e3q0ZW2OOr
-          %span 26 Feb 2014
-        %a.btn.btn-default.twitter_btb{:href => ""} Follow on Twitter
-.sidebar_single_module
-  .sidebar_wraper
-    .sidebar_inner
-      .flickr_widget
-        %h2 Flickr Widget
-        %div
-          %a{:href => "#"}
-            %img{:alt => "Title", :src => "http://placehold.it/70x70"}/
-          %a{:href => "#"}
-            %img{:alt => "Title", :src => "http://placehold.it/70x70"}/
-          %a{:href => "#"}
-            %img{:alt => "Title", :src => "http://placehold.it/70x70"}/
-          %a{:href => "#"}
-            %img{:alt => "Title", :src => "http://placehold.it/70x70"}/
-          %a{:href => "#"}
-            %img{:alt => "Title", :src => "http://placehold.it/70x70"}/
-          %a{:href => "#"}
-            %img{:alt => "Title", :src => "http://placehold.it/70x70"}/
-.sidebar_single_module
-  .sidebar_wraper
-    .sidebar_inner
-      .dribble_widget
-        %h2 Dribbble Widget
-        %div
-          %a{:href => "#"}
-            %img{:alt => "Title", :src => "http://placehold.it/220x165"}/
+        %br
+        %p= partial "social_icons"
+
 .sidebar_single_module
   .sidebar_wraper
     .sidebar_inner
       .text_widget
-        %h2 Text Widget
-        %p Ad eam iriure impetus convenire, quo eu virtute officiis. Pri te illum malis voluptatibus.
+        %h2 Recent Posts
+        - blog.articles.each do |article|
+          %p= link_to article.title, article
+
 .sidebar_single_module
   .sidebar_wraper
     .sidebar_inner
-      .tag_area
-        %h2 Tag
-        %div
-          %a{:href => ""} Hello
-          %a{:href => ""} Ciao.
-          %a{:href => ""} Hi
-          %a{:href => ""} Howdy.
-          %a{:href => ""} Hy.
+      .text_widget
+        %h2 Open Source Projects
+        %p
+          = link_to "Conjure", "https://github.com/brianauton/conjure"
+          Rails provisioning and deployment with the power of Docker.
+        %p
+          = link_to "Rails-Embryo", "https://github.com/brianauton/rails-embryo"
+          Generators to quick-start new Rails projects with best practices
+        %p
+          = link_to "Rails-Futurizer", "https://github.com/brianauton/rails-futurizer"
+          Helping to smooth the upgrade path for Rails applications.
+        %p
+          = link_to "RSpec-Live", "https://github.com/brianauton/rspec-contracts"
+          Auto-runner and formatter for RSpec 3.
+
 .sidebar_single_module
   .sidebar_wraper
     .sidebar_inner
       .text_widget.copy_right
-        %h2 &copy; 2014 by ThemeBull
-        %p
-          Designed with love by
-          %a{:href => ""} Mario Maruffi
-          and developed with care by
-          %a{:href => ""} PixelCoder
+        %h2 &copy; #{Date.today.year} Brian Auton
