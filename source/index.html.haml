@@ -8,9 +8,10 @@ per_page: 10
     %p= link_to 'Previous page', prev_page
 
 - page_articles.each_with_index do |article, i|
-  = partial "article_header", locals: {article: article}
-  = article.summary
-  = link_to "Read More...", article
+  = wrap_layout :article_frame do
+    = partial "article_header", locals: {article: article}
+    = article.summary
+    = link_to "Read More...", article
 
 - if paginate && next_page
   %p= link_to 'Next page', next_page

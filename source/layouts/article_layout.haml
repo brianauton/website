@@ -1,9 +1,0 @@
-= wrap_layout :layout do
-  .home_single_post
-    .post_content_area
-      .row
-        .col-xs-12.col-sm-8.col-md-8.col-lg-8.col-xs-offset-0.col-sm-offset-2.col-md-offset-2.col-lg-offset-2
-          .single_post_content
-            = partial "article_header", locals: {article: current_article}
-            = find_and_preserve { yield }
-            = disqus
