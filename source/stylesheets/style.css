@@ -119,9 +119,7 @@ a:focus, a:active{
 	margin-top: 0;
 	padding: 0 0 67px 0;
 }
-.small.profile_area .profile_inner {
-  padding-bottom: 37px;
-}
+.small.profile_area .profile_inner { padding-bottom: 127px; }
 
 .profile_area .profile_inner h2{
 	font-family: 'Lato',sans-serif;
@@ -137,7 +135,7 @@ a:focus, a:active{
 	-moz-transition:all .4s;
 	transition:all .4s;
 }
-.small.profile_area .profile_inner h2 { font-size: 36px; display: inline; position: relative; top: -28px;}
+.small.profile_area .profile_inner h2 { font-size: 36px; text-align: left; margin-left: -30px; }
 
 .profile_area .profile_inner h2:hover{
 	opacity:.8;
