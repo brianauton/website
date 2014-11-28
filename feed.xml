@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://blog.url.com/posts/best-commit-messages-one-line.html"/>
     <id>http://blog.url.com/posts/best-commit-messages-one-line.html</id>
     <published>2014-11-11T19:00:00-05:00</published>
-    <updated>2014-11-12T12:50:17-05:00</updated>
+    <updated>2014-11-22T22:42:50-05:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -22,9 +22,8 @@
 them to one line. Many developers and teams try to be helpful by packing extra detail into the
 body of each commit message whenever possible. But this detail takes extra time to write and
 to read, and it rarely adds any value. Here are some things I&amp;rsquo;ve often seen wasting space in
-the body of a multi-line commit message.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
+the body of a multi-line commit message.
+&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Specific descriptions of changes to the code.&lt;/strong&gt; Anyone who wants more detail about your
 commit after seeing it as a one-liner in the commit history will end up looking at the
@@ -75,7 +74,7 @@ highly-focused value to the project and make the best use of everyone&amp;rsquo;
     <link rel="alternate" href="http://blog.url.com/posts/token-authentication-devise.html"/>
     <id>http://blog.url.com/posts/token-authentication-devise.html</id>
     <published>2014-05-03T20:00:00-04:00</published>
-    <updated>2014-11-12T12:40:17-05:00</updated>
+    <updated>2014-11-22T22:51:49-05:00</updated>
     <author>
       <name>Article Author</name>
     </author>
@@ -96,9 +95,8 @@ its handy &lt;code&gt;token_authenticatable&lt;/code&gt; feature.&lt;/p&gt;
 &lt;code&gt;token_authenticatable&lt;/code&gt; has been &lt;a href="https://github.com/plataformatec/devise/issues/2616"&gt;removed&lt;/a&gt; from recent versions of
 Devise. They might be further dismayed to find that the only solution
 that has any sort of consensus as a replacement seems dubious for a
-couple of different reasons.&lt;/p&gt;
-
-&lt;p&gt;&lt;/p&gt;
+couple of different reasons.
+&lt;/p&gt;
 
 &lt;h4&gt;The Problem and Solutions So Far&lt;/h4&gt;
 

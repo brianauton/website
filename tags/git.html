@@ -10,46 +10,125 @@
     </title>
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
     <link href="/stylesheets/all.css" rel="stylesheet" type="text/css" />
-    <script src="/javascripts/all.js" type="text/javascript"></script>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
   </head>
   <body>
-    <div class='container-fluid'>
-      <div class='row'>
-        <div class='col-md-7 col-md-offset-1'>
-          <h1>Articles tagged 'git'</h1>
-          
-          
-          <ul>
-              <li><a href="/posts/best-commit-messages-one-line.html">The Best Commit Messages Are Just One Line</a> <span>Nov 12</span></li>
-          </ul>
+    <div class='body_back'>
+      <section class='left_sidebar_content_area'>
+        <div class='sidebar_single_module'>
+          <div class='sidebar_wraper'>
+            <div class='sidebar_inner'>
+              <div class='text_widget'>
+                <h2>
+                  Brian Auton
+                </h2>
+                <p>Software developer and consultant in the Philadelphia area.</p>
+              </div>
+              <div class='right_social_area'>
+                <br>
+                <p>
+                  <a class='fa fa-github' href='https://github.com/brianauton'></a>
+                  <a class='fa fa-linkedin-square' href='https://linkedin.com/in/brianauton'></a>
+                  <a class='fa fa-twitter' href='https://twitter.com/brianauton'></a>
+                  <a class='fa fa-envelope-o' href='mailto:brianauton@gmail.com'></a>
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class='col-md-3'>
-          <div class='well well-sm'>
-            <div class='well-title'><a href="/">Brian Auton</a></div>
-            <img src='/images/headshot.png'>
-            <div class='well-section'>Software developer and consultant in the Philadelphia area.</div>
-            <div class='well-section'><a href="https://twitter.com/brianauton/">twitter.com/brianauton</a></div>
-            <div class='well-section'><a href="https://linkedin.com/in/brianauton">linkedin.com/in/brianauton</a></div>
-            <div class='well-section'><a href="mailto:brianauton@gmail.com">brianauton@gmail.com</a></div>
+        <div class='sidebar_single_module'>
+          <div class='sidebar_wraper'>
+            <div class='sidebar_inner'>
+              <div class='text_widget'>
+                <h2>Recent Posts</h2>
+                <p><a href="/posts/best-commit-messages-one-line.html">The Best Commit Messages Are Just One Line</a></p>
+                <p><a href="/posts/token-authentication-devise.html">Rails Token Authentication Without Devise</a></p>
+              </div>
+            </div>
           </div>
-          <div class='well well-sm'>
-            <div class='well-title'>Recent Posts</div>
-            <div class='well-section'><a href="/posts/best-commit-messages-one-line.html">The Best Commit Messages Are Just One Line</a></div>
-            <div class='well-section'><a href="/posts/token-authentication-devise.html">Rails Token Authentication Without Devise</a></div>
-          </div>
-          <div class='well well-sm'>
-            <div class='well-title'>Open Source Projects</div>
-            <div class='well-heading'><a href="https://github.com/brianauton/conjure">Conjure</a></div>
-            <div class='well-text'>Rails provisioning and deployment with the power of Docker.</div>
-            <div class='well-heading'><a href="https://github.com/brianauton/rails-embryo">Rails-Embryo</a></div>
-            <div class='well-text'>A Rails starter project and testing ground for best practices.</div>
-            <div class='well-heading'><a href="https://github.com/brianauton/rails-futurizer">Rails-Futurizer</a></div>
-            <div class='well-text'>Helping to smooth the upgrade path for Rails applications.</div>
-            <div class='well-heading'><a href="https://github.com/brianauton/rspec-contracts">RSpec-Contracts</a></div>
-            <div class='well-text'>Automated rigor for unit tests. Still highly experimental.</div>
-          </div>
-          <div class='copyright'>&copy; 2014 Brian Auton</div>
         </div>
+        <div class='sidebar_single_module'>
+          <div class='sidebar_wraper'>
+            <div class='sidebar_inner'>
+              <div class='text_widget'>
+                <h2>Open Source Projects</h2>
+                <p>
+                  <a href="https://github.com/brianauton/conjure">Conjure</a>
+                  Rails provisioning and deployment with the power of Docker.
+                </p>
+                <p>
+                  <a href="https://github.com/brianauton/rails-embryo">Rails-Embryo</a>
+                  Generators to quick-start new Rails projects with best practices
+                </p>
+                <p>
+                  <a href="https://github.com/brianauton/rails-futurizer">Rails-Futurizer</a>
+                  Helping to smooth the upgrade path for Rails applications.
+                </p>
+                <p>
+                  <a href="https://github.com/brianauton/rspec-contracts">RSpec-Live</a>
+                  Auto-runner and formatter for RSpec 3.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='sidebar_single_module'>
+          <div class='sidebar_wraper'>
+            <div class='sidebar_inner'>
+              <div class='text_widget copy_right'>
+                <h2>&copy; 2014 Brian Auton</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class='main_content_area'>
+        <div id='expand_content_menu'>
+          <span class='icon icon-fontawesome-webfont-1'></span>
+        </div>
+        <div id='body_hover'></div>
+        <section class='profile_area'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-xs-12 col-sm-12 col-md-12 col-lg-12'>
+                <div class='profile_inner'>
+                  <div class='profile_picture'>
+                    <a href='/'>
+                      <img alt='title' src='/images/headshot.png'>
+                    </a>
+                  </div>
+                  <h2>
+                    <a href='/'>Brian Auton</a>
+                  </h2>
+                  <p>Software developer and consultant in the Philadelphia area.</p>
+                  <div class='social_icon'>
+                    <a class='fa fa-github' href='https://github.com/brianauton'></a>
+                    <a class='fa fa-linkedin-square' href='https://linkedin.com/in/brianauton'></a>
+                    <a class='fa fa-twitter' href='https://twitter.com/brianauton'></a>
+                    <a class='fa fa-envelope-o' href='mailto:brianauton@gmail.com'></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class='home_page_post_area'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-12'>
+                <h1>Articles tagged 'git'</h1>
+                
+                
+                <ul>
+                    <li><a href="/posts/best-commit-messages-one-line.html">The Best Commit Messages Are Just One Line</a> <span>Nov 12</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
     <script type="text/javascript">
@@ -62,5 +141,6 @@
         var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
       })();
     </script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
   </body>
 </html>
