@@ -1,23 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Blog Name</title>
-  <subtitle>Blog subtitle</subtitle>
-  <id>http://blog.url.com/</id>
-  <link href="http://blog.url.com/"/>
-  <link href="http://blog.url.com/feed.xml" rel="self"/>
+  <title>Brian Auton's Blog</title>
+  <subtitle>Software Developer and Consultant</subtitle>
+  <id>http://www.brianauton.com/</id>
+  <link href="http://www.brianauton.com/"/>
+  <link href="http://www.brianauton.com/feed.xml"/>
   <updated>2014-11-11T19:00:00-05:00</updated>
   <author>
-    <name>Blog Author</name>
+    <name>Brian Auton</name>
   </author>
   <entry>
     <title>The Best Commit Messages Are Just One Line</title>
-    <link rel="alternate" href="http://blog.url.com/posts/best-commit-messages-one-line.html"/>
-    <id>http://blog.url.com/posts/best-commit-messages-one-line.html</id>
+    <link rel="alternate" href="http://www.brianauton.com/posts/best-commit-messages-one-line.html"/>
+    <id>http://www.brianauton.com/posts/best-commit-messages-one-line.html</id>
     <published>2014-11-11T19:00:00-05:00</published>
-    <updated>2014-11-22T22:42:50-05:00</updated>
+    <updated>2014-12-03T21:18:06-05:00</updated>
     <author>
-      <name>Article Author</name>
+      <name>Brian Auton</name>
     </author>
+    <summary type="html">&lt;p&gt;If you want a simple way to make your commit messages more effective, try strictly limiting
+them to one line. Many developers and teams try to be helpful by packing extra detail into the
+body of each commit message whenever possible. But this detail takes extra time to write and
+to read, and it rarely adds any value. Here are some things I&amp;rsquo;ve often seen wasting space in
+the body of a multi-line commit message.
+</summary>
     <content type="html">&lt;p&gt;If you want a simple way to make your commit messages more effective, try strictly limiting
 them to one line. Many developers and teams try to be helpful by packing extra detail into the
 body of each commit message whenever possible. But this detail takes extra time to write and
@@ -71,13 +77,32 @@ highly-focused value to the project and make the best use of everyone&amp;rsquo;
   </entry>
   <entry>
     <title>Rails Token Authentication Without Devise</title>
-    <link rel="alternate" href="http://blog.url.com/posts/token-authentication-devise.html"/>
-    <id>http://blog.url.com/posts/token-authentication-devise.html</id>
+    <link rel="alternate" href="http://www.brianauton.com/posts/token-authentication-devise.html"/>
+    <id>http://www.brianauton.com/posts/token-authentication-devise.html</id>
     <published>2014-05-03T20:00:00-04:00</published>
-    <updated>2014-11-22T22:51:49-05:00</updated>
+    <updated>2014-12-03T21:18:06-05:00</updated>
     <author>
-      <name>Article Author</name>
+      <name>Brian Auton</name>
     </author>
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;A popular solution for token-based authentication in Rails has been
+retired, and the most common replacements leave some security issues
+unaddressed.  Here&amp;rsquo;s a solution with a clean and maintainable design.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Anyone working on a modern Rails application is probably familiar with
+&lt;a href="https://github.com/plataformatec/devise"&gt;Devise&lt;/a&gt;. It&amp;rsquo;s by far the &lt;a href="https://www.ruby-toolbox.com/categories/rails_authentication"&gt;most popular&lt;/a&gt; drop-in solution for handling
+authentication of the username and password variety. Anyone who also
+needs to offer token-based authentication (maybe in order to offer a
+REST API), might be accustomed to using Devise for this too, through
+its handy &lt;code&gt;token_authenticatable&lt;/code&gt; feature.&lt;/p&gt;
+
+&lt;p&gt;Those developers might be dismayed, as I was, to find that
+&lt;code&gt;token_authenticatable&lt;/code&gt; has been &lt;a href="https://github.com/plataformatec/devise/issues/2616"&gt;removed&lt;/a&gt; from recent versions of
+Devise. They might be further dismayed to find that the only solution
+that has any sort of consensus as a replacement seems dubious for a
+couple of different reasons.
+</summary>
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;A popular solution for token-based authentication in Rails has been
 retired, and the most common replacements leave some security issues
