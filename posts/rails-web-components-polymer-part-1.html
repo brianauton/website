@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta content='IE=edge;chrome=1' http-equiv='X-UA-Compatible'>
+    <meta content='width=device-width, initial-scale=1' name='viewport'>
+    <title>
+      Brian Auton
+       - Rails and Web Components Part 1&#58; Adding Polymer to a Rails App
+    </title>
+    <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/feed.xml" />
+    <link href="/stylesheets/all.css" rel="stylesheet" type="text/css" />
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class='body_back'>
+      <section class='left_sidebar_content_area'>
+        <div class='sidebar_single_module'>
+          <div class='sidebar_wraper'>
+            <div class='sidebar_inner'>
+              <div class='text_widget'>
+                <h2>
+                  Brian Auton
+                </h2>
+                <p>Software developer and consultant in the Philadelphia area.</p>
+              </div>
+              <div class='right_social_area'>
+                <br>
+                <p>
+                  <a class='fa fa-rss' href='/feed.xml'></a>
+                  <a class='fa fa-github' href='https://github.com/brianauton'></a>
+                  <a class='fa fa-linkedin-square' href='https://linkedin.com/in/brianauton'></a>
+                  <a class='fa fa-twitter' href='https://twitter.com/brianauton'></a>
+                  <a class='fa fa-envelope-o' href='mailto:brianauton@gmail.com'></a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='sidebar_single_module'>
+          <div class='sidebar_wraper'>
+            <div class='sidebar_inner'>
+              <div class='text_widget'>
+                <h2>Recent Posts</h2>
+                <p><a href="/posts/rails-web-components-polymer-part-1.html">Rails and Web Components Part 1&#58; Adding Polymer to a Rails App</a></p>
+                <p><a href="/posts/best-commit-messages-one-line.html">The Best Commit Messages Are Just One Line</a></p>
+                <p><a href="/posts/token-authentication-devise.html">Rails Token Authentication Without Devise</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='sidebar_single_module'>
+          <div class='sidebar_wraper'>
+            <div class='sidebar_inner'>
+              <div class='text_widget'>
+                <h2>Open Source Projects</h2>
+                <p>
+                  <a href="https://github.com/brianauton/conjure">Conjure</a>
+                  Rails provisioning and deployment with the power of Docker.
+                </p>
+                <p>
+                  <a href="https://github.com/brianauton/rails-embryo">Rails-Embryo</a>
+                  Generators to quick-start new Rails projects with best practices
+                </p>
+                <p>
+                  <a href="https://github.com/brianauton/rails-futurizer">Rails-Futurizer</a>
+                  Helping to smooth the upgrade path for Rails applications.
+                </p>
+                <p>
+                  <a href="https://github.com/brianauton/rspec-contracts">RSpec-Live</a>
+                  Auto-runner and formatter for RSpec 3.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='sidebar_single_module'>
+          <div class='sidebar_wraper'>
+            <div class='sidebar_inner'>
+              <div class='text_widget copy_right'>
+                <h2>&copy; 2014 Brian Auton</h2>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class='main_content_area'>
+        <div id='expand_content_menu'>
+          <span class='icon icon-fontawesome-webfont-1'></span>
+        </div>
+        <div id='body_hover'></div>
+        <section class='profile_area small'>
+          <div class='container'>
+            <div class='row'>
+              <div class='profile_inner'>
+                <div class='col-xs-5 col-sm-5 col-md-5 col-lg-5' style='text-align: right'>
+                  <div class='profile_picture'>
+                    <a href='/'>
+                      <img alt='title' src='/images/headshot.png'>
+                    </a>
+                  </div>
+                </div>
+                <div class='col-xs-7 col-sm-7 col-md-7 col-lg-7' style='text-align: left'>
+                  <h2>
+                    <a href='/'>Brian Auton</a>
+                  </h2>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class='home_page_post_area'>
+          <div class='container'>
+            <div class='row'>
+              <div class='col-md-12'>
+                <div class='home_single_post'>
+                  <div class='post_content_area'>
+                    <div class='row'>
+                      <div class='col-xs-12 col-sm-8 col-md-8 col-lg-8 col-xs-offset-0 col-sm-offset-2 col-md-offset-2 col-lg-offset-2'>
+                        <div class='single_post_content'>
+                          <h2><a href="/posts/rails-web-components-polymer-part-1.html">Rails and Web Components Part 1&#58; Adding Polymer to a Rails App</a></h2>
+                          <div class='post_info'>
+                            <div class='date_area'>
+                              <br>
+                              <a href="#">by Brian Auton,</a>
+                              <a href="#">Dec 11 2014</a>
+                              <br>
+                            </div>
+                          </div>
+                          <p>My horizons were expanded a little bit by Dane O&#39;Connor&rsquo;s recent talk on <a href="http://webcomponents.org/">web components</a> and
+                          <a href="https://www.polymer-project.org/">Polymer</a> at <a href="http://www.meetup.com/Software-as-Craft-Philadelphia/">Software As Craft Philadelphia</a>. Not knowing much about web components, I didn&rsquo;t
+                          realize there was such an elegant way to encapsulate the related JavaScript, CSS, and HTML for
+                          a single piece of a website&rsquo;s behavior without having to manipulate global state. That&rsquo;s a
+                          huge improvement to the state of the art for front-end development, and I immediately wondered
+                          how easy it would be to start including this stuff in some of my current Rails projects.</p>
+                          
+                          <p>If you&rsquo;re not already familiar with the basic idea of web components and how they work from a
+                          purely front-end perspective, take a look at the <a href="https://www.polymer-project.org/docs/start/everything.html">introduction on the Polymer site</a>. Otherwise,
+                          read on to learn about the mostly painless process I used to get web components up and running
+                          in an existing Rails app.
+                          </p>
+                          
+                          <h3>Asset Pipeline Support</h3>
+                          
+                          <p>In pursuit of a simple solution, I considered bypassing the asset pipeline and dumping some
+                          components into the public directory. But it turns out that a single gem addition can teach
+                          the asset pipeline how to package up web components just like other assets. <a href="https://github.com/ahuth/emcee">The Emcee gem</a>
+                          seems to be really good at this, so I started by adding <code>emcee</code> to my Gemfile and updating the
+                          bundle. Next I ran Emcee&rsquo;s generator to create a few useful files:</p>
+                          <pre class="highlight plaintext">rails g emcee:install</pre>
+                          
+                          <p>That gave me a brand new manifest file for web components, similar to the familiar
+                          application.js and application.css manifests, except this one&rsquo;s an html file. Emcee also added
+                          a reference to the new manifest file to my application layout. At this point I&rsquo;m free to add
+                          my own components to <code>app/assets/components</code>, and they&rsquo;ll get served up by the asset pipeline.</p>
+                          
+                          <h3>Installing a Component</h3>
+                          
+                          <p>But before diving into custom components, I wanted to see a stock component working in my app
+                          as a proof of concept. The Polymer project includes <a href="https://www.polymer-project.org/docs/start/usingelements.html">lots of components</a>, including a full set
+                          that implement Google&rsquo;s <a href="http://www.google.com/design/spec/material-design/introduction.html#">material design guidelines</a>. I could download a component along with
+                          each of its dependencies from the Polymer site and unzip them all into
+                          <code>app/assets/components</code>, but this process can easily be automated with a front-end package
+                          manager like <a href="http://bower.io/">Bower</a>, which is Polymer&rsquo;s recommended way to install components.</p>
+                          
+                          <p>I wasn&rsquo;t already using Bower to manage any of my Rails assets, but it&rsquo;s easy to install with
+                          <a href="http://nodejs.org/">node</a> and <a href="http://npmjs.org/">npm</a>. Installing those isn&rsquo;t covered here, but they&rsquo;re widely supported and should
+                          be easy to set up on any modern system that doesn&rsquo;t have them already. Since I already had
+                          node and npm, installing bower was easy:</p>
+                          <pre class="highlight plaintext">npm install -g bower</pre>
+                          
+                          <p>After that, any Polymer component and all its dependencies can be installed with a single
+                          bower command. Emcee already created a .bowerrc file to tell Bower to put packages in
+                          <code>vendor/assets/components</code>, where they&rsquo;ll be available to the asset pipeline but separate from
+                          any custom components I might add to <code>app/assets/components</code>. I decided to install a stock
+                          Polymer component that implements a material-styled button:</p>
+                          <pre class="highlight plaintext">bower install Polymer/paper-button</pre>
+                          
+                          <p>I also added it to the manifest at <code>app/assets/components/application.html</code>.</p>
+                          <pre class="highlight plaintext">*= require paper-button/paper-button</pre>
+                          
+                          <h3>Using the New Component</h3>
+                          
+                          <p>Now the installation is done, and I&rsquo;m free to drop the component&rsquo;s custom HTML element (in
+                          this case, <code>&lt;paper-button&gt;</code>) into any view in my app, and the component will show up on the
+                          page. Or at least it will show up in Chrome (more on browser compatibility in a moment).</p>
+                          <pre class="highlight plaintext">&lt;paper-button raised&gt;My Button Text&lt;/paper-button&gt;</pre>
+                          
+                          <p>After adding this code to a view, I have a button with its own &ldquo;paper&rdquo; styling and fancy
+                          JavaScript behavior, and all this complexity is fully encapsulated behind the <code>&lt;paper-button&gt;</code>
+                          tag. The button has complex CSS styles that look very different from the rest of my app, but I
+                          didn&rsquo;t have to change any of my existing CSS or selector names to avoid conflicts. The button
+                          uses a web font that I didn&rsquo;t previously have in my project, but I didn&rsquo;t have to install that
+                          either. And I don&rsquo;t know or care if the button depends on a hundred different JavaScript
+                          libraries, because I didn&rsquo;t have to separately include them in my project. If you think this
+                          sounds like a refreshingly modern way to manage front-end dependencies, you&rsquo;re starting to
+                          understand why web components are a big deal.</p>
+                          
+                          <h3>Supporting More Browsers</h3>
+                          
+                          <p>But at this point the component still didn&rsquo;t show up in any browser other than
+                          Chrome. Luckily, Polymer provides a library of JavaScript workarounds that extend web
+                          component support to browsers that haven&rsquo;t yet implemented all the necessary HTML features
+                          natively.</p>
+                          
+                          <p>The library is called <a href="http://webcomponents.org/polyfills/">webcomponents.js</a>, and Bower already installed it as one of
+                          paper-button&rsquo;s dependencies. I first tried including this library by referencing it in
+                          <code>app/assets/javascripts/application.js</code>. But this broke the <a href="https://github.com/teampoltergeist/poltergeist">Poltergeist-driven</a> acceptance
+                          tests in my test suite, because PhantomJS doesn&rsquo;t get along well with webcomponents.js. So as
+                          a temporary fix to keep my test suite passing, I had to include webcomponents.js in a way that
+                          let me turn it off in test mode. I ended up adding a separate include tag to my application
+                          layout:</p>
+                          <pre class="highlight plaintext">&lt;%= javascript_include_tag "webcomponentsjs/webcomponents" unless Rails.env.test? %&gt;</pre>
+                          
+                          <p>And then I needed to add it as an asset to be separately precompiled. This went in
+                          <code>config/initializers/assets.rb</code> with the rest of my asset pipeline configuration.</p>
+                          <pre class="highlight plaintext">Rails.application.config.assets.precompile &lt;&lt; "webcomponentsjs/webcomponents.js"</pre>
+                          
+                          <p>After that, my paper-button looked perfect in Firefox and Mobile Safari as well.</p>
+                          
+                          <h3>Testing Issues and Future Topics</h3>
+                          
+                          <p>It&rsquo;s a problem that web components don&rsquo;t yet work well with PhantomJS (and probably other
+                          similar testing tools), because I will definitely need acceptance-level testing of web
+                          components once my app starts to really depend on them. And once I start creating custom
+                          components of any real complexity, I&rsquo;ll also need to unit test them, which is something the
+                          Polymer team is <a href="https://github.com/Polymer/web-component-tester">actively working on</a>. I&rsquo;ll revisit these testing issues in a future post.</p>
+                          
+                          <p>Also in a future post, I&rsquo;ll look into the best ways for web components to interact with data
+                          that lives on the server side of a Rails app. But for now, if you&rsquo;ve been following along,
+                          you&rsquo;re ready to further explore the components described in the Polymer docs, as well as their
+                          tutorials on how to make your own custom components. Until next time, enjoy your trip into the
+                          future of web development.</p>
+                          <div id="disqus_thread"></div>
+                                      <script type="text/javascript">
+                                      //<![CDATA[
+                                          (function() {
+                                              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                                              dsq.src = '//brianauton.disqus.com/embed.js';
+                                              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                                          })();
+                                      //]]>
+                                      </script>
+                                      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+                                  </script>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      _gaq.push(["_setAccount", "UA-8088357-1"]);
+      _gaq.push(["_trackPageview"]);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? '//ssl' : '//www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
+    <script src="/javascripts/all.js" type="text/javascript"></script>
+  </body>
+</html>

@@ -5,16 +5,150 @@
   <id>http://www.brianauton.com/</id>
   <link href="http://www.brianauton.com/"/>
   <link href="http://www.brianauton.com/feed.xml"/>
-  <updated>2014-11-11T19:00:00-05:00</updated>
+  <updated>2014-12-10T19:00:00-05:00</updated>
   <author>
     <name>Brian Auton</name>
   </author>
+  <entry>
+    <title>Rails and Web Components Part 1&amp;#58; Adding Polymer to a Rails App</title>
+    <link rel="alternate" href="http://www.brianauton.com/posts/rails-web-components-polymer-part-1.html"/>
+    <id>http://www.brianauton.com/posts/rails-web-components-polymer-part-1.html</id>
+    <published>2014-12-10T19:00:00-05:00</published>
+    <updated>2014-12-11T16:16:15-05:00</updated>
+    <author>
+      <name>Brian Auton</name>
+    </author>
+    <summary type="html">&lt;p&gt;My horizons were expanded a little bit by Dane O&amp;#39;Connor&amp;rsquo;s recent talk on &lt;a href="http://webcomponents.org/"&gt;web components&lt;/a&gt; and
+&lt;a href="https://www.polymer-project.org/"&gt;Polymer&lt;/a&gt; at &lt;a href="http://www.meetup.com/Software-as-Craft-Philadelphia/"&gt;Software As Craft Philadelphia&lt;/a&gt;. Not knowing much about web components, I didn&amp;rsquo;t
+realize there was such an elegant way to encapsulate the related JavaScript, CSS, and HTML for
+a single piece of a website&amp;rsquo;s behavior without having to manipulate global state. That&amp;rsquo;s a
+huge improvement to the state of the art for front-end development, and I immediately wondered
+how easy it would be to start including this stuff in some of my current Rails projects.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re not already familiar with the basic idea of web components and how they work from a
+purely front-end perspective, take a look at the &lt;a href="https://www.polymer-project.org/docs/start/everything.html"&gt;introduction on the Polymer site&lt;/a&gt;. Otherwise,
+read on to learn about the mostly painless process I used to get web components up and running
+in an existing Rails app.
+</summary>
+    <content type="html">&lt;p&gt;My horizons were expanded a little bit by Dane O&amp;#39;Connor&amp;rsquo;s recent talk on &lt;a href="http://webcomponents.org/"&gt;web components&lt;/a&gt; and
+&lt;a href="https://www.polymer-project.org/"&gt;Polymer&lt;/a&gt; at &lt;a href="http://www.meetup.com/Software-as-Craft-Philadelphia/"&gt;Software As Craft Philadelphia&lt;/a&gt;. Not knowing much about web components, I didn&amp;rsquo;t
+realize there was such an elegant way to encapsulate the related JavaScript, CSS, and HTML for
+a single piece of a website&amp;rsquo;s behavior without having to manipulate global state. That&amp;rsquo;s a
+huge improvement to the state of the art for front-end development, and I immediately wondered
+how easy it would be to start including this stuff in some of my current Rails projects.&lt;/p&gt;
+
+&lt;p&gt;If you&amp;rsquo;re not already familiar with the basic idea of web components and how they work from a
+purely front-end perspective, take a look at the &lt;a href="https://www.polymer-project.org/docs/start/everything.html"&gt;introduction on the Polymer site&lt;/a&gt;. Otherwise,
+read on to learn about the mostly painless process I used to get web components up and running
+in an existing Rails app.
+&lt;/p&gt;
+
+&lt;h3&gt;Asset Pipeline Support&lt;/h3&gt;
+
+&lt;p&gt;In pursuit of a simple solution, I considered bypassing the asset pipeline and dumping some
+components into the public directory. But it turns out that a single gem addition can teach
+the asset pipeline how to package up web components just like other assets. &lt;a href="https://github.com/ahuth/emcee"&gt;The Emcee gem&lt;/a&gt;
+seems to be really good at this, so I started by adding &lt;code&gt;emcee&lt;/code&gt; to my Gemfile and updating the
+bundle. Next I ran Emcee&amp;rsquo;s generator to create a few useful files:&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;rails g emcee:install
+&lt;/pre&gt;
+
+&lt;p&gt;That gave me a brand new manifest file for web components, similar to the familiar
+application.js and application.css manifests, except this one&amp;rsquo;s an html file. Emcee also added
+a reference to the new manifest file to my application layout. At this point I&amp;rsquo;m free to add
+my own components to &lt;code&gt;app/assets/components&lt;/code&gt;, and they&amp;rsquo;ll get served up by the asset pipeline.&lt;/p&gt;
+
+&lt;h3&gt;Installing a Component&lt;/h3&gt;
+
+&lt;p&gt;But before diving into custom components, I wanted to see a stock component working in my app
+as a proof of concept. The Polymer project includes &lt;a href="https://www.polymer-project.org/docs/start/usingelements.html"&gt;lots of components&lt;/a&gt;, including a full set
+that implement Google&amp;rsquo;s &lt;a href="http://www.google.com/design/spec/material-design/introduction.html#"&gt;material design guidelines&lt;/a&gt;. I could download a component along with
+each of its dependencies from the Polymer site and unzip them all into
+&lt;code&gt;app/assets/components&lt;/code&gt;, but this process can easily be automated with a front-end package
+manager like &lt;a href="http://bower.io/"&gt;Bower&lt;/a&gt;, which is Polymer&amp;rsquo;s recommended way to install components.&lt;/p&gt;
+
+&lt;p&gt;I wasn&amp;rsquo;t already using Bower to manage any of my Rails assets, but it&amp;rsquo;s easy to install with
+&lt;a href="http://nodejs.org/"&gt;node&lt;/a&gt; and &lt;a href="http://npmjs.org/"&gt;npm&lt;/a&gt;. Installing those isn&amp;rsquo;t covered here, but they&amp;rsquo;re widely supported and should
+be easy to set up on any modern system that doesn&amp;rsquo;t have them already. Since I already had
+node and npm, installing bower was easy:&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;npm install -g bower
+&lt;/pre&gt;
+
+&lt;p&gt;After that, any Polymer component and all its dependencies can be installed with a single
+bower command. Emcee already created a .bowerrc file to tell Bower to put packages in
+&lt;code&gt;vendor/assets/components&lt;/code&gt;, where they&amp;rsquo;ll be available to the asset pipeline but separate from
+any custom components I might add to &lt;code&gt;app/assets/components&lt;/code&gt;. I decided to install a stock
+Polymer component that implements a material-styled button:&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;bower install Polymer/paper-button
+&lt;/pre&gt;
+
+&lt;p&gt;I also added it to the manifest at &lt;code&gt;app/assets/components/application.html&lt;/code&gt;.&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;*= require paper-button/paper-button
+&lt;/pre&gt;
+
+&lt;h3&gt;Using the New Component&lt;/h3&gt;
+
+&lt;p&gt;Now the installation is done, and I&amp;rsquo;m free to drop the component&amp;rsquo;s custom HTML element (in
+this case, &lt;code&gt;&amp;lt;paper-button&amp;gt;&lt;/code&gt;) into any view in my app, and the component will show up on the
+page. Or at least it will show up in Chrome (more on browser compatibility in a moment).&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&amp;lt;paper-button raised&amp;gt;My Button Text&amp;lt;/paper-button&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;After adding this code to a view, I have a button with its own &amp;ldquo;paper&amp;rdquo; styling and fancy
+JavaScript behavior, and all this complexity is fully encapsulated behind the &lt;code&gt;&amp;lt;paper-button&amp;gt;&lt;/code&gt;
+tag. The button has complex CSS styles that look very different from the rest of my app, but I
+didn&amp;rsquo;t have to change any of my existing CSS or selector names to avoid conflicts. The button
+uses a web font that I didn&amp;rsquo;t previously have in my project, but I didn&amp;rsquo;t have to install that
+either. And I don&amp;rsquo;t know or care if the button depends on a hundred different JavaScript
+libraries, because I didn&amp;rsquo;t have to separately include them in my project. If you think this
+sounds like a refreshingly modern way to manage front-end dependencies, you&amp;rsquo;re starting to
+understand why web components are a big deal.&lt;/p&gt;
+
+&lt;h3&gt;Supporting More Browsers&lt;/h3&gt;
+
+&lt;p&gt;But at this point the component still didn&amp;rsquo;t show up in any browser other than
+Chrome. Luckily, Polymer provides a library of JavaScript workarounds that extend web
+component support to browsers that haven&amp;rsquo;t yet implemented all the necessary HTML features
+natively.&lt;/p&gt;
+
+&lt;p&gt;The library is called &lt;a href="http://webcomponents.org/polyfills/"&gt;webcomponents.js&lt;/a&gt;, and Bower already installed it as one of
+paper-button&amp;rsquo;s dependencies. I first tried including this library by referencing it in
+&lt;code&gt;app/assets/javascripts/application.js&lt;/code&gt;. But this broke the &lt;a href="https://github.com/teampoltergeist/poltergeist"&gt;Poltergeist-driven&lt;/a&gt; acceptance
+tests in my test suite, because PhantomJS doesn&amp;rsquo;t get along well with webcomponents.js. So as
+a temporary fix to keep my test suite passing, I had to include webcomponents.js in a way that
+let me turn it off in test mode. I ended up adding a separate include tag to my application
+layout:&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;&amp;lt;%= javascript_include_tag "webcomponentsjs/webcomponents" unless Rails.env.test? %&amp;gt;
+&lt;/pre&gt;
+
+&lt;p&gt;And then I needed to add it as an asset to be separately precompiled. This went in
+&lt;code&gt;config/initializers/assets.rb&lt;/code&gt; with the rest of my asset pipeline configuration.&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;Rails.application.config.assets.precompile &amp;lt;&amp;lt; "webcomponentsjs/webcomponents.js"
+&lt;/pre&gt;
+
+&lt;p&gt;After that, my paper-button looked perfect in Firefox and Mobile Safari as well.&lt;/p&gt;
+
+&lt;h3&gt;Testing Issues and Future Topics&lt;/h3&gt;
+
+&lt;p&gt;It&amp;rsquo;s a problem that web components don&amp;rsquo;t yet work well with PhantomJS (and probably other
+similar testing tools), because I will definitely need acceptance-level testing of web
+components once my app starts to really depend on them. And once I start creating custom
+components of any real complexity, I&amp;rsquo;ll also need to unit test them, which is something the
+Polymer team is &lt;a href="https://github.com/Polymer/web-component-tester"&gt;actively working on&lt;/a&gt;. I&amp;rsquo;ll revisit these testing issues in a future post.&lt;/p&gt;
+
+&lt;p&gt;Also in a future post, I&amp;rsquo;ll look into the best ways for web components to interact with data
+that lives on the server side of a Rails app. But for now, if you&amp;rsquo;ve been following along,
+you&amp;rsquo;re ready to further explore the components described in the Polymer docs, as well as their
+tutorials on how to make your own custom components. Until next time, enjoy your trip into the
+future of web development.&lt;/p&gt;
+</content>
+  </entry>
   <entry>
     <title>The Best Commit Messages Are Just One Line</title>
     <link rel="alternate" href="http://www.brianauton.com/posts/best-commit-messages-one-line.html"/>
     <id>http://www.brianauton.com/posts/best-commit-messages-one-line.html</id>
     <published>2014-11-11T19:00:00-05:00</published>
-    <updated>2014-12-03T21:18:06-05:00</updated>
+    <updated>2014-12-11T15:39:06-05:00</updated>
     <author>
       <name>Brian Auton</name>
     </author>
